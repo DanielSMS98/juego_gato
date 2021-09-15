@@ -1,5 +1,4 @@
 from collections import deque
-from tablero import tablero
 
 turno = deque(["0","X"])
 tablero = [
@@ -55,11 +54,12 @@ def empate():
 
 
 def juego():
+
     mostra_tablero()
     jugador = rotar_turno()
     while True:
-        posicion = input(f"Juega {jugador}, elige una posicion fila,columna de  1 a 3: ")
-        if posicion == 'Salir':
+        posicion = input(f"Juega {jugador}, elige una posicion fila, columna de  1 a 3: ")
+        if posicion == 'salir':
             break;
         
         try:
